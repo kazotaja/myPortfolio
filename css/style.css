@@ -75,6 +75,39 @@ html, body {
     margin: 1px auto;
 }
 
+.menu-panel {
+    position: absolute;
+    right: -264px;
+    top: 0;
+    width: 264px;
+    height: 519px;
+    background-color: var(--primary-color-link);
+    font-size: 21px;
+    text-transform: uppercase;
+    text-align: center;
+    padding: 40px 0px 20px 0px;
+    box-sizing: border-box;
+    transition: right 1s ease-in-out;
+}
+
+.menu-panel ul  {
+    list-style: none;
+    padding: 0;
+}
+
+.menu-panel ul li   {
+    margin-bottom: 32px;
+}
+
+.menu-panel ul li a {
+    color: var(--primary-color-bg);
+    text-decoration: none;
+}
+
+.menu-panel.active  {
+    right: 0;
+}
+
 .logo-span  {
     display: inline-block;
     margin: 15px 10px;
@@ -86,15 +119,10 @@ html, body {
     font-size: 25pt;
     text-transform: uppercase; 
     color: var(--primary-color-link);
-
 }
 
 .profile    {
     text-align: center;
-}
-
-.profile-text  {
-    display: none;
 }
 
 .profile-image  {
@@ -242,6 +270,7 @@ hr  {
 .footer {
     text-align: center;
     padding-top: 8px;
+    padding-bottom: 8px;
     box-shadow: 0px -5px 5px rgba(0, 0, 0, 0.3); 
 }
 
@@ -256,6 +285,10 @@ hr  {
 @media (min-width: 768px) and (max-width: 1024px) {
 
     .hamburger  {
+        display: none;
+    }
+
+    .menu-panel {
         display: none;
     }
 
@@ -275,7 +308,6 @@ hr  {
         display: block;
         list-style: none;
         justify-self: end;   
-    
     }
 
     .menu-list ul {
@@ -326,6 +358,14 @@ hr  {
         display: grid;
         align-items: center;
         justify-content: start;
+    }
+
+    .my-works-intro {
+        display: grid;
+        align-items: center;
+        justify-content: start;   
+        margin-left: 26px; 
+        margin-right: 26px;
     }
 
     .profile-details span   {
@@ -492,7 +532,7 @@ hr  {
     }
     
     .contact-details ul {
-        font-size: 20px;
+        font-size: 21px;
         color: var(--primary-color-link);
     }
     
@@ -500,6 +540,25 @@ hr  {
         height: 20px;
         padding-right: 20px;
         color: var(--primary-color-text);
+    }
+    
+    .contact-details ul li {
+        margin-bottom: 24px;
+        line-height: 1.2;
+        font-size: 18px;
+        font-weight: 400;
+        text-transform: uppercase;
+        display: flex;
+        align-items: center;
+    }
+    
+    .contact-details ul li img {
+        margin-right: 20px;
+        height: 20px;
+    }
+    
+    .contact-details ul li span {
+        margin-left: 20px;
     }
     
     .contact-details p {
@@ -519,6 +578,8 @@ hr  {
         font-size: 26px;
         color: var(--primary-color-text);
     }
+
+    
     
 
 
@@ -540,6 +601,10 @@ hr  {
     }
 
     .hamburger  {
+        display: none;
+    }
+
+    .menu-panel {
         display: none;
     }
 
@@ -887,7 +952,79 @@ hr  {
 
     
 
-    
 }
 
 
+@media (max-width: 768px) {
+        
+    .my-works-intro {
+        display: none;
+    }
+
+    .profile-text  {
+        display: none;
+    }
+
+    .contact-intro  {
+        display: none;
+    }
+
+    .get-in-touch   {
+        display: none;
+    }
+
+    .contact h3 {
+        display: none;
+    }
+
+    html, body {
+        overflow-x: hidden;
+        margin: 0;
+        padding: 0;
+        width: 100%;
+    }
+
+    .footer-content {
+        display: none;
+    }
+
+}
+
+@media (min-width: 769px) {
+    .footer {
+        display: grid;
+        width: 100%;
+        height: 60px;
+        grid-template-columns: 1fr 1fr;
+        align-items: center;
+    }
+    
+    .footer-text, .footer-content {
+        font-family: 'Unbounded', sans-serif;
+        font-size: 12pt;
+        color: var(--primary-color-text);
+    }
+    
+    .footer-text {
+        margin-left: 26px;
+        text-align: start;
+        font-weight: 200;
+    }
+    
+    .footer-content {
+        margin-right: 26px;
+        text-align: right;
+        font-weight: 800;
+        text-transform: uppercase;
+    }
+    
+    .footer-content a {
+        color: var(--primary-color-text);
+        text-decoration: none;
+        transition: color 0.3s ease;
+    }
+    
+    .footer-content a:hover {
+        color: var(--primary-color-link);
+    }
+}
