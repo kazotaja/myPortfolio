@@ -1,0 +1,107 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Tilt+Warp:XROT,YROT@-45..45,-45..45&family=Unbounded:wght@200..900&display=swap');
+
+:root   {
+    --primary-color-text: #FFA987;
+    --primary-color-link: #E54B4B;
+    --primary-color-bg: #1E1E1E;
+    --primary-color-shadow: #000000; 
+
+}
+
+*   {
+    font-family: "Unbounded", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+    font-size: 20px;
+}
+
+body   {
+    overflow-x: hidden;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: var(--primary-color-bg);
+    font-family: "Unbounded", serif;
+    font-optical-sizing: auto;
+    font-weight: 200;
+    font-style: normal;
+}
+
+.menu   {
+    display: grid;
+    width: 100%;
+    grid-template-columns: 1fr 1fr;
+}
+
+.hamburger  {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    width: 48px;
+    height: 48px;
+    justify-content: space-evenly;
+    align-items: center;
+    border: 1px solid var(--primary-color-text);
+    border-radius: 10px;
+    background-color: var(--primary-color-bg);
+    margin: 16px;
+    justify-self: end;
+}
+
+.line   {
+    width: 28px;
+    height: 3px;
+    background-color: var(--primary-color-text);
+    border-radius: 10px;
+    margin: 1px auto;
+}
+
+.menu-panel {
+    position: absolute;
+    right: -264px;
+    top: 0;
+    width: 264px;
+    height: 519px;
+    background-color: var(--primary-color-link);
+    font-size: 21px;
+    text-transform: uppercase;
+    text-align: center;
+    padding: 40px 0px 20px 0px;
+    box-sizing: border-box;
+    transition: right 1s ease-in-out;
+}
+
+.menu-panel ul  {
+    list-style: none;
+    padding: 0;
+}
+
+.menu-panel ul li   {
+    margin-bottom: 32px;
+}
+
+.menu-panel ul li a {
+    color: var(--primary-color-bg);
+    text-decoration: none;
+}
+
+.menu-panel.active  {
+    right: 0;
+}
+
+.frame  {
+    width: 100%;
+    text-align: center;
+}
+
+.frame img {
+    object-fit: cover;
+    width: 320px;
+    height: 180px; 
+    border-radius: 20px;
+    margin: 20px;
+    overflow: hidden; 
+    box-shadow: 0px 4px 8px black; 
+}
